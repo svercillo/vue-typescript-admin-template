@@ -1,4 +1,6 @@
 <template>
+<v-app>
+  <v-content>
   <div class="login-container">
     <el-form
       ref="loginForm"
@@ -102,6 +104,9 @@
       <social-sign />
     </el-dialog>
   </div>
+
+  </v-content>
+</v-app>
 </template>
 
 <script lang="ts">

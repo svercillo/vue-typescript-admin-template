@@ -12,6 +12,7 @@ module.exports = {
   publicPath: process.env.NODE_ENV === 'production' ? '/vue-typescript-admin-template/' : '/',
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
+
   devServer: {
     port: devServerPort,
     open: true,
@@ -33,6 +34,7 @@ module.exports = {
       }
     }
   },
+
   pwa: {
     name: name,
     workboxPluginMode: 'InjectManifest',
@@ -40,6 +42,7 @@ module.exports = {
       swSrc: path.resolve(__dirname, 'src/pwa/service-worker.js')
     }
   },
+
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'scss',
@@ -49,6 +52,7 @@ module.exports = {
       ]
     }
   },
+
   chainWebpack(config) {
     // provide the app's title in html-webpack-plugin's options list so that
     // it can be accessed in index.html to inject the correct title.
@@ -111,5 +115,9 @@ module.exports = {
           config.optimization.runtimeChunk('single')
         }
       )
-  }
+  },
+
+  transpileDependencies: [
+    'vuetify'
+  ]
 }

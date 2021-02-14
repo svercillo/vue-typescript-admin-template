@@ -73,7 +73,7 @@ export default {
     profile: 'Profile'
   },
   login: {
-    title: 'Login Form',
+    title: 'Server Diagnostics: Login',
     logIn: 'Login',
     username: 'Username',
     password: 'Password',

@@ -1,4 +1,5 @@
 import Vue, { DirectiveOptions } from 'vue'
+import vuetify from '@/plugins/vuetify' // path to vuetify export
 
 import 'normalize.css'
 import ElementUI from 'element-ui'
@@ -16,6 +17,7 @@ import '@/icons/components'
 import '@/permission'
 import '@/utils/error-log'
 import '@/pwa/register-service-worker'
+
 import * as directives from '@/directives'
 import * as filters from '@/filters'
 
@@ -42,7 +44,10 @@ Object.keys(filters).forEach(key => {
 
 Vue.config.productionTip = false
 
+// Vue.use(Buefy)
+
 new Vue({
+  vuetify,
   router,
   store,
   i18n,
